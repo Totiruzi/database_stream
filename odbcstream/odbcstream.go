@@ -38,7 +38,7 @@ func InitialiseDBConnection(driverType, dataSourceName string) error{
 
 // Getting list of tables in database
 func List(t *Table) {
-	var tables []byte
+	var tables []Table
 	ta, err := DBClient.Query("SELECT * FROM sys.Table") 
 		if err != nil {
 			panic(err.Error())
